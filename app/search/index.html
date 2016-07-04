@@ -1,0 +1,13 @@
+<div class="container" ng-app="myApp.search" ng-controller="SearchCtrl">
+	<div class="form-group col-md-12 col-xs-12 col-lg-12">
+		<h1>People Search</h1>
+		<input class="form-control" ng-model="keyword" placeholder="enter your search term..." />
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-12 col-lg-4" ng-repeat="person in people | filter:keyword">
+			<img src="../assets/img/{{ person.image}}" title="Image of {{ person.name}} age {{ person.age}} years" alt="Image of {{ person.name}} age {{ person.age}} years">
+			<h3>{{ person.name}}</h3>
+		</div>
+	</div>
+</div>
+  
